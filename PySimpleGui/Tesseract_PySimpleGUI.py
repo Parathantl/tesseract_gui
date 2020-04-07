@@ -14,6 +14,11 @@ layout = [[sg.Text('PDF to Text - Tesseract4 GUI')],
 
 window = sg.Window('Tesseract4 PDF to Text', layout)
 
+current_path = os.path.dirname(os.path.abspath(__file__))
+
+if not os.path.exists(current_path+'/singles'):
+	os.mkdir(current_path+'/singles')
+
 event, values = window.read()
 
 path = values[0]
@@ -29,10 +34,7 @@ def pdf_splitter(path):
 			pdf_writer.write(out)
 		print('Created: {}'.format(output_filename))
 
-single_pdf = r'C:\Users\pc\Desktop\pdf\singles'
-pdf_splitter(path)
-
-single_pdf = r"C:\Users\pc\Desktop\pdf\singles"
+single_pdf = current_path+'/singles'
 pdf_splitter(path)
 
 jpg_folder = values[1]
@@ -57,5 +59,10 @@ for root, dirs, file in os.walk(single_pdf):
 		cmd1 = 'tesseract '+jpg_folder+'/'+name_file+'.jpg '+text_folder+'/'+name_file+' -l eng+tam'
 		q = subprocess.Popen(cmd1 , shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
 		#print("Converting JPG to Text: ",name_file)
+
+try:
+	os.remove(single_pdf)
+except:
+	print("Error\n")
 
 window.close()

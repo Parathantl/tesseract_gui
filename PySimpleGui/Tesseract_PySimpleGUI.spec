@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['Tesseract_PySimpleGUI.py'],
-             pathex=['C:\\Users\\pc\\Desktop'],
+             pathex=['C:\\Users\\pc\\Desktop\\tesseract_gui\\PySimpleGui'],
              binaries=[],
              datas=[],
              hiddenimports=[],

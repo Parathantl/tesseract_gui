@@ -1,4 +1,4 @@
-('C:\\Users\\pc\\Desktop\\build\\Tesseract_PySimpleGUI\\PYZ-00.pyz',
+('C:\\Users\\pc\\Desktop\\tesseract_gui\\PySimpleGui\\build\\Tesseract_PySimpleGUI\\PYZ-00.pyz',
  [('multiprocessing.popen_fork',
    'c:\\users\\pc\\appdata\\local\\programs\\python\\python38-32\\lib\\multiprocessing\\popen_fork.py',
    'PYMODULE'),
