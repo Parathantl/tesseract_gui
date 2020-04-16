@@ -12,6 +12,20 @@ https://drive.google.com/file/d/11Awcs8Upj_kHMLXgBIp5jgeZ9b1025Dn/view?usp=shari
 *Tesseract 
 என்பவற்றை install செய்து கொள்ளும்.
 
+முதல் பக்கம் 
 ![Front Screen](https://github.com/Parathantl/tesseract_gui/blob/master/PySimpleGui/screenshots/First.PNG)
 
+Text உருவாக்கவேண்டிய PDF கோப்பினை தெரிவு செய்து Start ஐ click செய்யவும். 
+![Front Screen](https://github.com/Parathantl/tesseract_gui/blob/master/PySimpleGui/screenshots/Second.PNG)
 
+![Front Screen](https://github.com/Parathantl/tesseract_gui/blob/master/PySimpleGui/screenshots/Third.PNG)
+![Front Screen](https://github.com/Parathantl/tesseract_gui/blob/master/PySimpleGui/screenshots/Fourth.PNG)
+
+
+PDF உள்ள கோப்பு க்கு அருகில் நேர நிமிடங்களுடன் ஒரு கோப்பு (Folder) உருவாக்கப்படும்.
+![Front Screen](https://github.com/Parathantl/tesseract_gui/blob/master/PySimpleGui/screenshots/Fifth.PNG)
+
+இதற்குள் முதலாவதாக மொத்த PDF ன் ஒவ்வொரு பக்கங்களும் தனித்தனி PDF ஆக்கப்பட்டு "singlepdf" இனுள் சேமிக்கப்படும் பின்னர் ஒவ்வொரு PDF ம் JPG ஆக "jpg" குள் சேமிக்கப்படும். இறுதியாக Text கோப்புக்கள் "text" folder உள் சேமிக்கப்படும்.
+![Front Screen](https://github.com/Parathantl/tesseract_gui/blob/master/PySimpleGui/screenshots/Sixth.PNG)
+
+![Front Screen](https://github.com/Parathantl/tesseract_gui/blob/master/PySimpleGui/screenshots/Seventh.PNG)
