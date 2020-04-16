@@ -36,3 +36,5 @@ PDF உள்ள கோப்பு க்கு அருகில் நேர
 
 
 ![Front Screen](https://github.com/Parathantl/tesseract_gui/blob/master/PySimpleGui/screenshots/Seventh.PNG)
+
+PySimpleGUI கற்பதற்கு இலகுவானதாக அமைந்ததால் அதன் மூலம் இதை செய்திருக்கிறேன். வேறு முறைகளை பயன்படுத்தி செய்வதற்கு உதவி புரியுங்கள்.
