@@ -59,9 +59,13 @@ def convertJpgToText(single_pdf):
 
     window2.close()
 
-layout = [[sg.Text('PDF to Text - Tesseract4 GUI')],
-          [sg.Text('Enter the PDF File:', size=(16, 1)), sg.Input(), sg.FileBrowse()],
-          [sg.Button("Start"), sg.Cancel()]]
+tab2_layout = [[sg.T('Creator: Parathan')],[sg.T('License: GNU General Public License v2.0')],[sg.T('email: parathanlive123@gmail.com')]]
+
+tab1_layout = [[sg.T('PDF to Text - Tesseract4 GUI')],
+               [sg.T('Enter the PDF File:', size=(16, 1)), sg.Input(), sg.FileBrowse()],
+               [sg.Button("Start"), sg.Cancel()]]
+
+layout = [[sg.TabGroup([[sg.Tab('Home', tab1_layout), sg.Tab('About', tab2_layout)]])]]
 
 #[sg.Text('Enter the ISO 639-3 code of the language you want: '),sg.InputText()],
 
