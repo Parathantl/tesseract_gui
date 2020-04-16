@@ -11,3 +11,7 @@ https://drive.google.com/file/d/11Awcs8Upj_kHMLXgBIp5jgeZ9b1025Dn/view?usp=shari
 *Ghostscipt
 *Tesseract 
 என்பவற்றை install செய்து கொள்ளும்.
+
+![Front Screen](https://github.com/Parathantl/tesseract_gui/blob/master/PySimpleGui/screenshots/First.PNG)
+
+
