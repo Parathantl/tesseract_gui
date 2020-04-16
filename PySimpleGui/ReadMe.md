@@ -2,3 +2,12 @@
 (User Interface) க்காக Python மூலமாக PySimpleGUI module ஐ பயன்படுத்தி இது உருவாக்கப்பட்டுள்ளது.
 
 சாதாரணமான இடைமுகமாக இது அமையும்.
+
+EXE கோப்பினை இங்கு தரவிறக்கம் செய்து கொள்ளலாம்.
+https://drive.google.com/file/d/11Awcs8Upj_kHMLXgBIp5jgeZ9b1025Dn/view?usp=sharing
+
+இது தானியக்கமாகவே இவ் மென்பொருளை இயக்கத் தேவையான 
+*Python
+*Ghostscipt
+*Tesseract 
+என்பவற்றை install செய்து கொள்ளும்.
