@@ -107,7 +107,6 @@ class App(QtWidgets.QWidget):
 
         self.show()
 
-
     def open_new_dialog(self):
         self.nd = NewDialog()
         self.nd.show()
@@ -120,8 +119,7 @@ class App(QtWidgets.QWidget):
     @pyqtSlot()
     def on_start_click(self):
 
-        textboxValue = self.line.text()
-        print(textboxValue)
+        self.textboxValue = self.line.text()
 
         self.startB.setText('On Process..!')
 
@@ -146,7 +144,6 @@ class App(QtWidgets.QWidget):
         
         self.labelA.setText('Completed. Please Visit the folder '+self.mydir)
         self.startB.setText('Start')
-
 
     def pdf_splitter(self):
         pdf = PdfFileReader(self.fname[0])
@@ -201,7 +198,7 @@ class App(QtWidgets.QWidget):
             for i, files in enumerate(file):
                 name_file = os.path.splitext(files)[0]
                 
-                cmd1 = 'tesseract '+self.jpg_folder+'/'+name_file+'.jpg '+self.text_folder+'/'+name_file+' -l tam+eng'
+                cmd1 = 'tesseract '+self.jpg_folder+'/'+name_file+'.jpg '+self.text_folder+'/'+name_file+' -l '+ self.textboxValue
                 
                 q = subprocess.Popen(cmd1 , shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
                     
