@@ -6,10 +6,10 @@
 Name "UninstallExample1"
 
 ; The file to write
-OutFile "Tesseract_GUI.exe"
+OutFile "Tesseract_GUI_Tool.exe"
 
 ; The default installation directory
-InstallDir $PROGRAMFILES\TesseractGUI\
+InstallDir $PROGRAMFILES\Tesseract_GUI\
 
 ; The text to prompt the user to enter a directory
 DirText "This will install My Cool Program on your computer. Choose a directory"
@@ -53,7 +53,7 @@ Section ""
 SetOutPath $INSTDIR
 
 ; Put a file there
-File Tesseract_PySimpleGUI.exe
+File Tesseract_GUI_Tool.exe
 
 ; Tell the compiler to write an uninstaller and to look for a "Uninstall" section
 WriteUninstaller $INSTDIR\Uninstall.exe
@@ -62,7 +62,7 @@ SectionEnd
 
 Section "Desktop Shortcut" SectionX
     SetShellVarContext current
-    CreateShortCut "$DESKTOP\Tesseract_PySimpleGUI.lnk" "$INSTDIR\Tesseract_PySimpleGUI.exe"
+    CreateShortCut "$DESKTOP\Tesseract_GUI_Tool.lnk" "$INSTDIR\Tesseract_GUI_Tool.exe"
 SectionEnd
 
 ;-------------------
@@ -71,7 +71,7 @@ SectionEnd
 Section "Uninstall"
 
 Delete $INSTDIR\Uninstall_Tesseract_GUIl.exe
-Delete $INSTDIR\Tesseract_GUI.exe
+Delete $INSTDIR\Tesseract_GUI_Tool.exe
 RMDir $INSTDIR
 
 SectionEnd

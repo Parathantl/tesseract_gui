@@ -7,7 +7,7 @@ Text file
 
 Author: Parathan Thiyagalingam
 Website: medium.com/@parathantl
-Last edited: April 2020
+Last edited: May 2020
 """
 
 import sys
@@ -33,7 +33,7 @@ class NewDialog(QtWidgets.QWidget):
     self.setGeometry(self.left, self.top, self.width, self.height)
 
     self.name = QtWidgets.QLabel(self)
-    self.name.setText('Created by: Thiyagalingam Parathan')
+    self.name.setText('Created by: Parathan Thiyagalingam')
     self.name.setGeometry(QtCore.QRect(20, 40, 500, 30))
 
     self.email = QtWidgets.QLabel(self)
@@ -160,7 +160,7 @@ class App(QtWidgets.QWidget):
         
         for root, dirs, file in os.walk(self.single_pdf):
 
-            if (platform.system() == 'Linux'):
+            if (platform.system() == 'Linux' or platform.system() == 'Darwin'):
                 for i, files in enumerate(file):
 
                     name_file = os.path.splitext(files)[0]
@@ -168,6 +168,7 @@ class App(QtWidgets.QWidget):
                     cmd = r'gs -q -DNOPAUSE -DBATCH -r300x300 -SDEVICE=jpeg -dSAFER -sOutputFile='+self.jpg_folder+'/'+name_file+'.jpg '+ '"'+root+'/'+files+'"'               
             
                     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
+                    p.communicate()
 
                     #line to change progress
                     QtWidgets.QApplication.processEvents() 
@@ -185,6 +186,8 @@ class App(QtWidgets.QWidget):
                     
                     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
                     
+                    p.communicate()
+
                     QtWidgets.QApplication.processEvents() 
 
                     #line to change progress
@@ -201,12 +204,14 @@ class App(QtWidgets.QWidget):
                 cmd1 = 'tesseract '+self.jpg_folder+'/'+name_file+'.jpg '+self.text_folder+'/'+name_file+' -l '+ self.textboxValue
                 
                 q = subprocess.Popen(cmd1 , shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
-                    
+                
+                q.communicate()
+
                 QtWidgets.QApplication.processEvents() 
 
                 #line to change progress
                 self.labelA.setText('Converting JPG to Text: Page '+str(i+1)+' of '+str(len(file)))
-                time.sleep(2)
+                time.sleep(1)
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
