@@ -35,7 +35,8 @@ If you don't know which languages Tesseract is available or the language code yo
 Tesseract is available.
 Just find out it and input the languages.
 
-Then click # Start 
+Then click **Start**
+
 In the directory path of the selected PDF, you  can see a folder is created with TimeStamp(YY-MM-DD) inside the folder you can 
 see 3 folders.
 1. single_pdf: Contains all the pages of PDF as a seperate PDF files
