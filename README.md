@@ -2,7 +2,7 @@
 Simple Python GUI Tool for Tesseract4
 
 This is a very simple Graphical User Interface created in Python PyQT5 module to do Optical Character Recognition using Open-Source 
-Tesseract4.OCR with Tesseract is available only in Command Line. To ease, the usability of Tesseract for normal users this simple tool 
+Tesseract4. OCR with Tesseract is available only in Command Line. To ease, the usability of Tesseract for normal users this simple tool 
 will help.
 
 # For Windows
