@@ -7,7 +7,7 @@ will help.
 
 # For Windows
 
-Download the EXE file from release repository. (https://github.com/Parathantl/tesseract_gui/releases)
+Download the EXE file from [Release Repository](https://github.com/Parathantl/tesseract_gui/releases).
 
 It is currently available for 64 bit only. Soon, this will be available to 32 bit too.
 When executing the EXE you might face some security issues/ get blocked by Windows stating that you can't execute. So, may have to off 
@@ -17,7 +17,7 @@ downloaded to the PC and can do OCR.
 
 # For Linux/Ubuntu
 
-Clone this repository and run the Tesseract_GUI_Tool.py	file.
+Clone this repository and run the **Tesseract_GUI_Tool.py**	file.
 To run successully, you need to have Python, pip, Ghostscript and Tesseract needs to be installed.
 Other that that, PyQT5 module needs to be installed.
 
@@ -26,7 +26,6 @@ To install PyQT5 run
 ```
 pip install PyQT5
 ```
-
 
 # How to Use
 
@@ -45,4 +44,4 @@ see 3 folders.
 
 That's it...
 
-** Happy OCR ing **
+**Happy OCR ing**
