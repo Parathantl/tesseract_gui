@@ -23,7 +23,10 @@ Other that that, PyQT5 module needs to be installed.
 
 To install PyQT5 run
 
-'''pip install PyQT5'''
+```
+pip install PyQT5
+```
+
 
 # How to Use
 
