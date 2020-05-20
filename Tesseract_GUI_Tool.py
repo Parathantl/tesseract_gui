@@ -26,29 +26,47 @@ class NewDialog(QtWidgets.QWidget):
     self.title = 'About'
     self.left = 300
     self.top = 300
-    self.width = 300
-    self.height = 200
+    self.width = 400
+    self.height = 300
 
     self.setWindowTitle(self.title)
     self.setGeometry(self.left, self.top, self.width, self.height)
 
     self.name = QtWidgets.QLabel(self)
     self.name.setText('Created by: Parathan Thiyagalingam')
-    self.name.setGeometry(QtCore.QRect(20, 40, 500, 30))
+    self.name.setGeometry(QtCore.QRect(20, 50, 500, 30))
 
     self.email = QtWidgets.QLabel(self)
     self.email.setText('email: parathanlive123@gmail.com')
-    self.email.setGeometry(QtCore.QRect(20, 60, 500, 30))
+    self.email.setGeometry(QtCore.QRect(20, 80, 500, 30))
 
     self.gitLink = QtWidgets.QLabel(self)
     self.gitLink.setOpenExternalLinks(True)
     urlLink="<a href=\"https://github.com/Parathantl/tesseract_gui\">Github Repository</a>"
     self.gitLink.setText(urlLink)
-    self.gitLink.setGeometry(QtCore.QRect(20, 90, 500, 20))
+    self.gitLink.setGeometry(QtCore.QRect(20, 120, 500, 20))
 
     self.license = QtWidgets.QLabel(self)
-    self.license.setText('GNU General Public License v2.0')
-    self.license.setGeometry(QtCore.QRect(20, 110, 500, 20))
+    self.license.setText('GNU General Public License v3.0 ')
+    self.license.setGeometry(QtCore.QRect(20, 150, 500, 20))
+
+    self.nool = QtWidgets.QLabel(self)
+    self.nool.setText('Thanks to: Noolaham Foundation,')
+    self.nool.setGeometry(QtCore.QRect(20, 180, 500, 20))
+
+    self.nool2 = QtWidgets.QLabel(self)
+    self.nool2.setText('an Online Tamil Digital Library archiving resources ')
+    self.nool2.setGeometry(QtCore.QRect(20, 200, 500, 20))
+
+    self.nool3 = QtWidgets.QLabel(self)
+    self.nool3.setText('related to Tamil Speaking community of Sri Lanka.')
+    self.nool3.setGeometry(QtCore.QRect(20, 220, 500, 20))
+    self.noollink = QtWidgets.QLabel(self)
+
+    self.noollink.setOpenExternalLinks(True)
+    urlLink="<a href=\"https://www.noolaham.org/wiki\">noolaham.org</a> | <a href=\"http://aavanaham.org/\">aavanaham.org</a>"
+    self.noollink.setText(urlLink)
+    self.noollink.setGeometry(QtCore.QRect(20, 250, 500, 20))
 
 class App(QtWidgets.QWidget):
 
