@@ -141,9 +141,13 @@ class App(QtWidgets.QWidget):
 
         self.startB.setText('On Process..!')
 
-        folder_name = os.path.dirname(self.fname[0])
+        self.folder_name = os.path.dirname(self.fname[0])
 
-        self.mydir = os.path.join(folder_name,datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))
+        self.folderFileName = os.path.splitext(os.path.basename(self.fname[0]))[0].replace(" ","_")
+
+        self.dateTimeFolder = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+
+        self.mydir = os.path.join(self.folder_name,self.dateTimeFolder)
 
         os.makedirs(self.mydir)
         os.makedirs(self.mydir+'/singlepdf')
@@ -159,6 +163,8 @@ class App(QtWidgets.QWidget):
         self.pdf_splitter()
         self.convertpdfToJpg()
         self.convertJpgToText()
+        self.concatenateAllText()
+        self.renameFolder()
         
         self.labelA.setText('Completed. Please Visit the folder '+self.mydir)
         self.startB.setText('Start')
@@ -183,7 +189,7 @@ class App(QtWidgets.QWidget):
 
                     name_file = os.path.splitext(files)[0]
                     
-                    cmd = r'gs -q -DNOPAUSE -DBATCH -r300x300 -SDEVICE=jpeg -dSAFER -sOutputFile='+self.jpg_folder+'/'+name_file+'.jpg '+ '"'+root+'/'+files+'"'               
+                    cmd = r'gs -q -DNOPAUSE -DBATCH -r300x300 -SDEVICE=jpeg -dSAFER -sOutputFile="'+self.jpg_folder+'/'+name_file+'.jpg" '+ '"'+root+'/'+files+'"'               
             
                     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
                     p.communicate()
@@ -200,7 +206,7 @@ class App(QtWidgets.QWidget):
                     
                     name_file = os.path.splitext(files)[0]
                     
-                    cmd = r'"C:\Program Files\gs\gs9.52\bin\gswin64c.exe" -q -DNOPAUSE -DBATCH -r300x300 -SDEVICE=jpeg -dSAFER -sOutputFile='+self.jpg_folder+'/'+name_file+'.jpg '+ '"'+root+'/'+files+'"'
+                    cmd = r'"C:\Program Files\gs\gs9.52\bin\gswin64c.exe" -q -DNOPAUSE -DBATCH -r300x300 -SDEVICE=jpeg -dSAFER -sOutputFile="'+self.jpg_folder+'/'+name_file+'.jpg" '+ '"'+root+'/'+files+'"'
                     
                     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
                     
@@ -219,7 +225,7 @@ class App(QtWidgets.QWidget):
             for i, files in enumerate(file):
                 name_file = os.path.splitext(files)[0]
                 
-                cmd1 = 'tesseract '+self.jpg_folder+'/'+name_file+'.jpg '+self.text_folder+'/'+name_file+' -l '+ self.textboxValue
+                cmd1 = 'tesseract "'+self.jpg_folder+'/'+name_file+'.jpg" "'+self.text_folder+'/'+name_file+'" -l '+ self.textboxValue
                 
                 q = subprocess.Popen(cmd1 , shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
                 
@@ -230,6 +236,22 @@ class App(QtWidgets.QWidget):
                 #line to change progress
                 self.labelA.setText('Converting JPG to Text: Page '+str(i+1)+' of '+str(len(file)))
                 time.sleep(1)
+
+    def concatenateAllText(self):
+
+        path, dirs, files = next(os.walk(self.single_pdf))
+        lengthOfFiles = len(files)
+        
+        with open(self.mydir+'/'+self.folderFileName+'.txt', 'w', encoding='utf8' ) as result:
+            for i in range (1,lengthOfFiles+1):
+                fileName = self.text_folder+'/page_'+str(i)+'.txt'
+                for line in open(fileName, 'r', encoding='utf8'):
+                    result.write( line )
+
+                result.write("\n")
+
+    def renameFolder(self):
+        os.rename(self.mydir, self.folder_name+'/'+self.folderFileName+'_'+self.dateTimeFolder ) 
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
