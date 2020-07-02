@@ -4,11 +4,11 @@
 # Execute Python EXE File
 "./python.exe"
 
-# Execute Ghost Script EXE file
-"./gs.exe"
-
 # Install Tesseract
 "./tesseract.exe"
+
+# Execute Ghost Script EXE file
+"./gs.exe"
 
 # Install Python PyPDF2 Module
 pip3 install PyPDF2
