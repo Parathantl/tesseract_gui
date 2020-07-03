@@ -10,22 +10,28 @@ will help.
 Download the EXE file from [Release Repository](https://github.com/Parathantl/tesseract_gui/releases).
 
 It is currently available for 64 bit only. Soon, this will be available to 32 bit too.
-When executing the EXE you might face some security issues/ get blocked by Windows stating that you can't execute. So, may have to off 
-the protection / anti-virus protection. You will be asked to install Python3, Ghostscript, Tesseract in the order respectively.
-Just install them as it goes. While installing Tesseract please choose the Languages you want to do OCR. Then only the data will be 
-downloaded to the PC and can do OCR.
+
+Download the ZIP file from the Release Repository.
+Click the setup.bat file
+A Command-Line will be opened and asks you to install Python, Tesseract and GhostScript in the respective order.
+While setting up Tesseract don not forget to select the languages you are going to use to do OCR.
+
+That's it. You are all done.!!
 
 # For Linux/Ubuntu
 
-Clone this repository and run the **Tesseract_GUI_Tool.py**	file.
-To run successully, you need to have Python, pip, Ghostscript and Tesseract needs to be installed.
-Other that that, PyQT5 module needs to be installed.
+Clone this repository
 
-To install PyQT5 run
+CHANGE YOUR DIRECTORY into this repo
+Run the following command inside the folder
 
-```
-pip install PyQT5
-```
+```chmod +x setup.sh
+````
+This will download you all the necessary modules to do OCR.
+While installing the Language set to be downloaded for Tesseract is Tamil.
+If you want any other languages, just change the tam with your language you want to do OCR.
+
+Then run the **Tesseract_GUI_Tool.py**	file.
 
 # How to Use
 
@@ -42,6 +48,8 @@ see 3 folders.
 1. single_pdf: Contains all the pages of PDF as a seperate PDF files
 2. jpeg: every single PDF will be in JPEG format
 3. text: every single pages will be in a Text document
+
+Finally inside the folder, a Single Text file will be created
 
 That's it...
 
