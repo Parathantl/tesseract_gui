@@ -7,7 +7,7 @@ will help.
 
 # For Windows
 
-Download the EXE file from [Release Repository](https://github.com/Parathantl/tesseract_gui/releases).
+Download release folder from [Release Repository](https://github.com/Parathantl/tesseract_gui/releases).
 
 It is currently available for 64 bit only. Soon, this will be available to 32 bit too.
 
