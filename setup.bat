@@ -14,4 +14,4 @@
 pip3 install PyPDF2
 
 # Add Environmental Variables
-setx path "%path%;%localappdata%\Programs\Python\Python38-32\Scripts;C:\Program Files (x86)\Tesseract-OCR;%localappdata%\Programs\Python\Python38-32;"
+setx path "%localappdata%\Programs\Python\Python38-32\Scripts;C:\Program Files (x86)\Tesseract-OCR;%localappdata%\Programs\Python\Python38-32;%path%;"
