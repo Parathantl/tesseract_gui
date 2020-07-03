@@ -27,7 +27,13 @@ Run the following command inside the folder
 
 ```
 chmod +x setup.sh
-````
+```
+Then execute the setup.sh from the terminal like the following
+
+```
+./setup.sh
+```
+
 This will download you all the necessary modules to do OCR.
 While installing the Language set to be downloaded for Tesseract is Tamil.
 If you want any other languages, just change the tam with your language you want to do OCR.
