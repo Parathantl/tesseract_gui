@@ -25,7 +25,8 @@ Clone this repository
 CHANGE YOUR DIRECTORY into this repo
 Run the following command inside the folder
 
-```chmod +x setup.sh
+```
+chmod +x setup.sh
 ````
 This will download you all the necessary modules to do OCR.
 While installing the Language set to be downloaded for Tesseract is Tamil.
