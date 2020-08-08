@@ -60,4 +60,10 @@ Finally inside the folder, a Single Text file will be created
 
 That's it...
 
+# For Video Demonstration in Tamil. 
+Please refer the following YouTube Links
+- https://www.youtube.com/watch?v=zenvLwzPg_w
+- https://www.youtube.com/watch?v=awnGGLyYqec
+- https://www.youtube.com/watch?v=NSZmOYuEaOw 
+
 **Happy OCR ing**
